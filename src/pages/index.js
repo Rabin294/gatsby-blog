@@ -22,7 +22,7 @@ export default ({ data }) => {
       <Seo title="Home" />
       <div>
         <h1>Rabin's thoughts</h1>
-        <h4>{data.allMarkdownRemark.totalCount}Posts</h4>
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
