@@ -15,7 +15,7 @@ const BlogTitle = styled.h3`
   color: blue;
 `
 
-export default ({ data }) => {
+const MainPage = ({ data }) => {
   console.log(data)
   return (
     <Layout>
@@ -30,6 +30,7 @@ export default ({ data }) => {
                 {node.frontmatter.title} -{node.frontmatter.date}
               </BlogTitle>
             </BlogLink>
+
             <p>{node.excerpt}</p>
           </div>
         ))}
@@ -37,6 +38,7 @@ export default ({ data }) => {
     </Layout>
   )
 }
+export default MainPage
 
 export const query = graphql`
   query {
